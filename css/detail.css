@@ -1,0 +1,227 @@
+body{
+    /* height: 1500px; */
+}
+header{
+    background-color: #fa3432;
+    height: .92rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .28rem;
+    color: #fff;
+    padding-left: .31rem;
+    padding-right: .31rem;
+}
+header a{
+    color: #fff;
+}
+
+header .iconfont{
+    font-size: .3rem;
+}
+/* -------------- */
+.data{
+    height: 2.22rem;
+    color: #fff;
+    text-align: center;
+    padding-top: .5rem;
+    background: linear-gradient(to bottom,#ff3c01,#d80607);
+}
+.data .data1{
+    font-size: .68rem;
+    margin-bottom: .42rem;
+}
+.data .data2{
+    font-size: .3rem;
+}
+
+/* ------------------- */
+.support{ }
+.support .keys{ 
+    height: .79rem;
+    font-size: .3rem;
+    color: #757575;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #f1f0f0;
+}
+.support .keys span{
+    width: 50%;
+    text-align: center;
+}
+/* 选中第1个span */
+.support .keys span:first-child{  
+    border-right: 1px solid #f1f0f0;
+}
+
+/* ------------------------ */
+
+.support ul{
+    width: 6.4rem;
+    height: 2.03rem;
+    margin: .4rem auto 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background: url("../img/detail_icon_bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.support ul li{
+    width: 50%;
+    height: .55rem;
+    line-height: .55rem;
+    color: #ffc166;
+    font-size: .24rem;
+    text-align: center;
+}
+.support ul li .iconfont{
+    display: inline-block;
+    width: .55rem;
+    height: .55rem;
+    font-size: .26rem;
+    border: 3px solid #f5f5f4;
+    border-radius: 50%;
+    margin-right: .13rem;
+}
+
+/* ------------------------ */
+.process{
+    margin-top: .75rem;
+}
+
+.process .pro-wrap{
+    position: relative;
+    width: 6.82rem;
+    height: .15rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+.process .pro-wrap .pro-front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 0.15rem;
+    background-color: #fb0502;
+    border-radius: 8px;
+}
+.process .pro-wrap .pro-block{
+    position: absolute; /* 此行代码此时就充当了参考点 */
+    top: -0.5rem;
+    left: 2.7rem;
+    width: .6rem;
+    height: .32rem;
+    line-height: .32rem;
+    text-align: center;
+    color: #fff;
+    background-color: #fb0502;
+    font-size: .24rem;
+}
+/* 通过伪元素创建一个三角 */
+.process .pro-wrap .pro-block:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: .12rem solid transparent;
+    border-top: .12rem solid #fb0502;
+    position: absolute;
+    left: 50%;
+    top: .35rem;
+    /* CSS3中的属性  暂时了解  使用平移 */
+    transform: translateX(-50%);
+}
+
+.process .pro-info{
+    width: 6.85rem;
+    margin: .25rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+    font-size: .22rem;
+}
+.process .pro-info em{
+    color: #fb0502;
+}
+
+/* ------------- */
+.footerlink{
+    position: fixed;
+    bottom: 1.4rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.footerlink a{
+    font-size: .22rem;
+    color: #808080;
+}
+/* ------------- */
+footer{
+    position: fixed;
+    bottom: 0rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.05rem;
+    padding-left: .36rem;
+    padding-right: .2rem;
+    background-color: #f0f0f0;
+}
+footer .earnings{
+    color: #f90;
+    font-size: .32rem;
+    text-decoration: underline;
+}
+footer .investment{
+    width: 5.19rem;
+    height: .82rem;
+    color: #fff;
+    background-color: #fa3432;
+    text-align: center;
+    line-height: .82rem;
+    font-size: .32rem;
+}
+
+/* -------- 蒙版 */
+.mask{
+    /* 没有设置参考点，就以body作为参考点 */
+    /* 下面的5行代码就保证这个盒子完全盖住了手机屏幕 */
+    position: absolute;
+    /* top: 0; */
+    top: .92rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+
+    /*  默认是隐藏掉了 */
+    display: none; 
+}
+.mask .nav{
+    background-color: #fff;
+    height: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mask .nav a{
+    color: #f00;
+    font-size: .28rem;
+    width: 25%;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+.mask .nav a .iconfont{
+    display: block;
+    font-size: .4rem;
+    margin: 0 auto;
+}
+.mask .nav a:last-child{
+    border-right: none;
+}

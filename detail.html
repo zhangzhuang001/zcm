@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/detaicReset.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <script>
+        window.onload = function () {
+            var fs = document.documentElement.clientWidth / 750 * 100;
+            document.querySelector("html").style.fontSize = fs + "px";
+        }
+    </script>
+    <!-- 
+        rem适配的原理：  cssrem  调整基准是100
+            大屏上面显示大盒子  小屏上面显示小盒子  等比缩放
+
+        不要使用px做单位   rem   rem相对于html根标签的fontsize的大小的为基准的
+            750屏  设置html的fs是100px        1rem = 100px
+            375屏  设置html的fs是50px         1rem = 50px 
+            320屏  设置html的fs是42.666666         1rem = 42.666666
+     -->
+    <title>详情页</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <!-- top区域 start -->
+    <header>
+        <a href="./index.html"><i class="iconfont icon-fanhui"></i></a>
+        <span>赚钱计划8号1期</span>
+        <i id="menu" class="iconfont icon-caidan"></i>
+    </header>
+    <!-- top区域 end -->
+
+    <div class="data">
+        <p class="data1"><strong>9.2%+0.5%</strong></p>
+        <p class="data2"><em>9.7%(9.2%+活动加息0.5%)</em></p>
+    </div>
+
+    <div class="support">
+        <div class="keys">
+            <span>1000元起投</span>
+            <span>限期180天</span>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <i class="iconfont icon-xinshouzhiyin "></i>省级律所法律支持
+                </li>
+                <li>
+                    <i class="iconfont icon-xinshouzhiyin "></i>省级律所法律支持
+                </li>
+                <li>
+                    <i class="iconfont icon-xinshouzhiyin "></i>省级律所法律支持
+                </li>
+                <li>
+                    <i class="iconfont icon-xinshouzhiyin "></i>省级律所法律支持
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="process">
+        <div class="pro-wrap">
+            <!-- 真实的元素 -->
+            <div class="pro-front"></div>
+            <div class="pro-block">37%</div>
+        </div>
+        <p class="pro-info">
+            <span>已投资<em>40</em>人</span>
+            <span>剩余可设<em>888888</em>元</span>
+        </p>
+    </div>
+
+    <div class="footerlink">
+        <p><a href="">查看项目详情></a></p>
+    </div>
+
+    <footer>
+        <a href="#" class="earnings">收益估算</a>
+        <a href="#" class="investment">立即投资</a>
+    </footer>
+
+    <div class="mask" id="mask">
+        <div class="nav">
+            <a href="#">
+                <i class="iconfont icon-zhuye"></i>
+                <span>主页</span>
+            </a>
+            <a href="#">
+                <i class="iconfont icon-suo"></i>
+                <span>安全保障</span>
+            </a>
+            <a href="#">
+                <i class="iconfont icon-touzi"></i>
+                <span>我要投资</span>
+            </a>
+            <a href="#">
+                <i class="iconfont icon-jiaruwomen"></i>
+                <span>账户中心</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 得到蒙版和nav小导航
+        let mask = document.getElementById("mask");
+        // 得到菜单小按钮
+        let menu = document.getElementById("menu");
+        // 给按钮注册一个点击事件  
+        // 当事件发生时  会调用后面的function(){}这个函数
+        menu.onclick = function(){
+            mask.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
